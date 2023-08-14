@@ -3,12 +3,13 @@ import React from "react";
 interface Props {
   todo: string;
   setTodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd: (e: React.FormEvent) => void;
 }
 
-const InputField = ({ todo, setTodo }: Props) => {
+const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   return (
-    <div>
-      <form className="relative w-96 mx-auto mt-10">
+    <div className="mb-10">
+      <form onSubmit={handleAdd} className="relative w-96 mx-auto mt-10">
         <input
           className="input input-secondary w-full bg-white absolute right-0"
           value={todo}
