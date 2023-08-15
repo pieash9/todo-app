@@ -60,6 +60,9 @@ const App: React.FC = () => {
           completedTodos={completedTodos}
           setCompletedTodos={setCompletedTodos}
         />
+        <p className="mt-auto mb-5 font-medium text-xl">
+          All right reserved to <span className="text-white">pieash9</span>
+        </p>
       </div>{" "}
     </DragDropContext>
   );
