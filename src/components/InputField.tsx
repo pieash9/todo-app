@@ -8,17 +8,17 @@ interface Props {
 
 const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   return (
-    <div className="mb-10">
-      <form onSubmit={handleAdd} className="relative w-96  mt-10">
+    <div className="mb-16  mx-auto md:w-[70%] w-full">
+      <form onSubmit={handleAdd} className="relative w-full  mt-10">
         <input
-          className="input input-secondary w-full bg-white absolute right-0"
+          className="input w-full bg-white absolute right-0"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
           type="text"
-          placeholder="Enter a task"
+          placeholder="Enter task"
         />
         <button className="btn btn-primary btn-sm absolute z-50 right-2 top-2 rounded-full ">
-          Go
+          Create
         </button>
       </form>
     </div>
