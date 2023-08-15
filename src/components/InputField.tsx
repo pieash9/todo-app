@@ -9,7 +9,7 @@ interface Props {
 const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   return (
     <div className="mb-10">
-      <form onSubmit={handleAdd} className="relative w-96 mx-auto mt-10">
+      <form onSubmit={handleAdd} className="relative w-96  mt-10">
         <input
           className="input input-secondary w-full bg-white absolute right-0"
           value={todo}

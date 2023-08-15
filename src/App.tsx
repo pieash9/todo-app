@@ -16,8 +16,8 @@ const App: React.FC = () => {
     console.log(todos);
   };
   return (
-    <div className="bg-blue-400 h-screen text-center">
-      <h2 className="pt-5 z-40 text-center text-white text-3xl font-semibold">
+    <div className="bg-blue-400 h-screen flex items-center flex-col">
+      <h2 className="pt-5 text-center text-white text-3xl font-semibold">
         Taskify
       </h2>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
