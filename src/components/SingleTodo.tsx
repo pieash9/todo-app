@@ -10,7 +10,7 @@ type Props = {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const SingleTodo: React.FC = ({ todo, todos, setTodos, i }: Props) => {
+const SingleTodo: React.FC<Props> = ({ i, todo, todos, setTodos }) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
@@ -69,28 +69,27 @@ const SingleTodo: React.FC = ({ todo, todos, setTodos, i }: Props) => {
 
             <div className="flex gap-2">
               <span
-              
                 onClick={() => {
                   if (!edit && !todo.isDone) {
                     setEdit(!edit);
                   }
                 }}
                 className="cursor-pointer tooltip tooltip-primary tooltip-top"
-                data-tip='Edit'
+                data-tip="Edit"
               >
                 <AiFillEdit />
               </span>
               <span
                 onClick={() => handleDelete(todo.id)}
                 className="cursor-pointer tooltip tooltip-error tooltip-top"
-                data-tip='Delete'
+                data-tip="Delete"
               >
                 <AiFillDelete />
               </span>
               <span
                 onClick={() => handleDone(todo.id)}
                 className="cursor-pointer tooltip tooltip-success tooltip-top"
-                data-tip='Done'
+                data-tip="Done"
               >
                 <MdDone />
               </span>
